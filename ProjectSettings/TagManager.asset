@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - FinishLine
   - Coin
+  - Hazard
   layers:
   - Default
   - TransparentFX

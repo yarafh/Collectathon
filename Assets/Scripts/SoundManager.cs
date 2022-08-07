@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip playerJump, coinCollect, winSound;
+    public AudioClip playerJump, coinCollect, winSound, hazardSound;
 
     private void Start()
     {
@@ -26,7 +26,12 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(winSound);
     }
-    
+
+    public void PlayHazardSound()
+    {
+        audioSource.PlayOneShot(hazardSound);
+    }
+
     private void Update()
     {
         
