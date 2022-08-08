@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectCoin : MonoBehaviour
 {
+    [SerializeField] private Text coinCounter;
     private PlayerJump playerJumpScript;
     public int coin=0;
     [SerializeField] Vector3 Checkpoint;
@@ -33,10 +35,11 @@ public class CollectCoin : MonoBehaviour
     }
     private void Update()
     {
+        coinCounter.text=("" + coin);
         if(coin==20)
         {
-            finishLine.SetActive(true);  
             playerJumpScript.sm.PlayWinSound();
+            finishLine.SetActive(true);  
         }
     }
 }

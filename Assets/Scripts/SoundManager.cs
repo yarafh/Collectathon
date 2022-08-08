@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip playerJump, coinCollect, winSound, hazardSound;
+    public AudioClip playerJump, coinCollect, winSound, hazardSound, enemySound;
 
     private void Start()
     {
@@ -32,8 +32,8 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(hazardSound);
     }
 
-    private void Update()
+    public void PlayEnemySound()
     {
-        
+        audioSource.PlayOneShot(enemySound);
     }
 }
